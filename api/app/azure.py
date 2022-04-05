@@ -61,9 +61,9 @@ def get_blobs_from_container(container_name):
             return {'files': processed_files }
     
     except Exception as ex:
-        logger.info("azure blob storage failed with the following exception")
-        logger.info("Exception:")
-        logger.info(ex)
+        print("azure blob storage failed with the following exception")
+        print("Exception:")
+        print(ex)
      
     #nothing is stored in the container
     return {'files': [] }
