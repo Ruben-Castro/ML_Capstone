@@ -11,7 +11,7 @@ export default function UploadCard({ upload }: any) {
 
     const downloadFile = (fileName: string) => {
         console.log("download file started")
-        let filePath = `http://localhost/videos/${fileName}`
+        let filePath = `${process.env.REACT_APP_API_BASE_URL}/videos/${fileName}`
         axios({
             method: "GET",
             url: filePath,
@@ -32,7 +32,7 @@ export default function UploadCard({ upload }: any) {
 
     const downloadCSV = (fileName: string) => {
         console.log("download file started")
-        let filePath = `http://localhost/csvdata/${fileName}`
+        let filePath = `${process.env.REACT_APP_API_BASE_URL}/csvdata/${fileName}`
         axios({
             method: "GET",
             url: filePath,

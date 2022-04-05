@@ -8,7 +8,7 @@ import UploadCard from "../components/UploadCard"
 
 
 const fetchUploads = async () => {
-    const { data } = await axios.get("http://localhost/videos")
+    const { data } = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/videos`)
     console.log(data)
     return data
 }

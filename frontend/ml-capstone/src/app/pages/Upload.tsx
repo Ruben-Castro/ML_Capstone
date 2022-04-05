@@ -17,7 +17,7 @@ const addFiles = async (files: any) => {
     console.log("keys")
     console.log(formData.keys);
 
-    axios.post("http://localhost/uploadvideos", formData, {
+    axios.post(`${process.env.REACT_APP_API_BASE_URL}/uploadvideos`, formData, {
         headers: {
             'Content-Type': 'multipart/form-data'
         }
@@ -115,7 +115,7 @@ export default function Upload() {
 
 
         <Snackbar
-            open={ mutation.isSuccess && snackbarOpen == false}
+            open={mutation.isSuccess && snackbarOpen == false}
             autoHideDuration={6000}
             onClose={() => { setSnackbarOpen(false) }}
             anchorOrigin={{ vertical: 'top', horizontal: 'right' }}

@@ -6,7 +6,8 @@ COPY package.json .
 RUN npm install 
 #copy over all of the source code
 COPY . .
-ENV REACT_APP_NAME=UCSD_ML_CAPSTONE
+
+ENV REACT_APP_API_BASE_URL=https://ruben-capstone-api.westus.azurecontainer.io
 
 #build 
 RUN npm run build
