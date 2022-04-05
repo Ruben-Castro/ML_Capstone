@@ -18,15 +18,3 @@ website: https://viratdata.org/
 
 "A Large-scale Benchmark Dataset for Event Recognition in Surveillance Video" by Sangmin Oh, Anthony Hoogs, Amitha Perera, Naresh Cuntoor, Chia-Chih Chen, Jong Taek Lee, Saurajit Mukherjee, J.K. Aggarwal, Hyungtae Lee, Larry Davis, Eran Swears, Xiaoyang Wang, Qiang Ji, Kishore Reddy, Mubarak Shah, Carl Vondrick, Hamed Pirsiavash, Deva Ramanan, Jenny Yuen, Antonio Torralba, Bi Song, Anesco Fong, Amit Roy-Chowdhury, and Mita Desai, in Proceedings of IEEE Comptuer Vision and Pattern Recognition (CVPR), 2011."
 
-
-### Virat Parser 
- Python CLI application that takes in the folder paths for virat original videos, virat anotations and target folder - the location where we want the videos with bounding boxes to be stored. 
-
-
-
- ### Yolo V3 
- Yolo v3 is used as the object detection alogrithm for this application. I'm initially using the default application configuration. with the provided weights. 
-
-
- ### Deepsort 
-Deepsort is used for object tracking implementation provided by: "REFRENCE author" "REFRENCE RESEARCH PAPER"
