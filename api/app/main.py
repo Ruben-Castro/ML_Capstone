@@ -24,6 +24,11 @@ app = FastAPI()
 
 origins = [
     "http://localhost:3000",
+    "http://ruben-castro-ucsd-capstone.westus.azurecontainer.io",
+    "http://ruben-castro-ucsd-capstone.westus.azurecontainer.io:80",
+    "https://ruben-castro-ucsd-capstone.westus.azurecontainer.io",
+    "https://ruben-castro-ucsd-capstone.westus.azurecontainer.io:80",
+
 ]
 
 app.add_middleware(
