@@ -42,6 +42,8 @@ def upload_to_csv_container(file_name):
     my_content_settings = ContentSettings(content_type='text/csv')
     __upload_to_container(CSV_CONTAINER,file_location, file_name, my_content_settings)
     __delete_file(file_location, file_name)
+    file_location ="/code/app/uploaded_files/"
+    __delete_file(file_location, file_name)
 
 def upload_to_processed_container(file_name):
     file_location="/code/app/processed_videos/"
