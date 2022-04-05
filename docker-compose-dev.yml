@@ -1,0 +1,18 @@
+version: "3"
+services:
+  react-app:
+    build:
+      context: frontend/ml-capstone/.
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend/ml-capstone/src:/app/src
+    environment:
+      - REACT_APP_NAME=UCSD_ML_CAPSTONE_DEV
+  capstone-api:
+    build: api/.
+    ports:
+      - "80:80"
+    volumes:
+      - ./api/app:/code/app
