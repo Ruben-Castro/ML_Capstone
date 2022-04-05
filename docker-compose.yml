@@ -1,0 +1,14 @@
+version: "3"
+services: 
+  react-app:
+    build: front-end/ml-capstone/.
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./front-end/ml-capstone/src:/app/src
+  capstone-api:
+    build: api/.
+    ports:
+      - "80:80"
+    volumes:
+      - ./api/app:/code/app
