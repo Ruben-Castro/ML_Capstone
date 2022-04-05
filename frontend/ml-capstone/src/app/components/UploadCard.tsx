@@ -11,7 +11,7 @@ export default function UploadCard({ upload }: any) {
 
     const downloadFile = (fileName: string) => {
         console.log("download file started")
-        let filePath = `http://localhost/videos/processed/${fileName}`
+        let filePath = `http://localhost/videos/${fileName}`
         axios({
             method: "GET",
             url: filePath,
@@ -63,13 +63,12 @@ export default function UploadCard({ upload }: any) {
         </CardContent>
         <CardActions disableSpacing>
             <Button onClick={() => {
-                setProgressBarDisplay(true)
-                downloadFile(`${upload.filename.split('.')[0]}_yolo_out.avi`)
+                downloadFile(`${upload.filename}`)
             }}>Download Anotated Video</Button>
             <Button
                 onClick={() => {
 
-                    downloadCSV(`${upload.filename.split('.')[0]}_yolo_out.csv`)
+                    downloadCSV(`${upload.filename.split('.')[0]}.csv`)
                 }}
 
             >Download CSV Data</Button>

@@ -1,0 +1,21 @@
+FROM node as build
+WORKDIR '/app'
+# This is an optimizatiion step seperate layer 
+COPY package.json . 
+#install our dev packages 
+RUN npm install 
+#copy over all of the source code
+COPY . .
+ENV REACT_APP_NAME=UCSD_ML_CAPSTONE
+
+#build 
+RUN npm run build
+
+#stage 2 
+FROM nginx
+COPY --from=build /app/build /usr/share/nginx/html
+RUN rm /etc/nginx/conf.d/default.conf
+COPY nginx/nginx.conf /etc/nginx/conf.d
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
+

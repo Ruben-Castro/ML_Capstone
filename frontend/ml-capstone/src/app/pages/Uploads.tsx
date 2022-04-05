@@ -21,29 +21,7 @@ const fetchUploads = async () => {
 export default function Uploads() {
 
     const query = useQuery('uploaded videos', fetchUploads)
-    const [progressBarPercent, setProgressBarPercent] = useState(0)
-    const [progressBarDisplay, setProgressBarDisplay] = useState(false)
 
-    const downloadFile = (fileName: string) => {
-        console.log("download file started")
-        let filePath = `http://localhost/videos/processed/${fileName}`
-        axios({
-            method: "GET",
-            url: filePath,
-            responseType: 'blob',
-            onDownloadProgress: (progressEvent) => {
-                let percentCompleted = Math.round((progressEvent.loaded * 100) / progressEvent.total); // you can use this to show user percentage of file downloaded
-                setProgressBarPercent(percentCompleted)
-            }
-        }).then((response) => {
-            let filename = filePath.replace(/^.*[\\\/]/, '')
-            let fileExtension;
-            fileExtension = filePath.split('.');
-            fileExtension = fileExtension[fileExtension.length - 1];
-            fileDownload(response.data, `${filename}.${fileExtension}`);
-
-        })
-    }
 
 
     return (
