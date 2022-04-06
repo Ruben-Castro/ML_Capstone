@@ -4,7 +4,7 @@
 
 This is my USCD ML Bootcamp capstone project it is a SaaS web application that allows its users to submit mp4 video files. It then allows the user to download an anotated video with the bounding boxes corresponding to persons in the video. The DL model used for object detection is YOLO V3.
 
-#### production application:  ruben-castro-ucsd-capstone.westus.azurecontainer.io/
+#### production application: [url](http://ruben-castro-ucsd-capstone.westus.azurecontainer.io/)
 
 
 ## Yolo v3 overview 
